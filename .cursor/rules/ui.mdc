@@ -1,0 +1,60 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+You are designing UI that must strictly match this style guide:
+
+Foundations
+- Technology: Tailwind CSS with @tailwindcss/typography and @tailwindcss/forms. Favor utility classes; avoid custom CSS unless necessary.
+- Layout: Centered content with constrained reading width (lg:max-w-screen-md). Generous whitespace, vertical stacking (flex/column) and small gaps (gap-2/3/4).
+- Typography: 
+  - Base UI: Inter (sans), readable sizes.
+  - Display/Body: Use font-serif for section titles and long-form content.
+  - Long-form content must use Tailwind’s prose classes (prose-sm; elevate to sm:prose-base or sm:prose-lg as needed).
+- Color palette (subtle grayscale-first):
+  - Page background: #EDEDED.
+  - Text: gray-700/800/900 for primary; gray-500/600 for secondary.
+  - Borders/Dividers: gray-300/400; lists use divide-gray-100.
+  - Surfaces: white cards with light borders and subtle shadows.
+  - Accents (sparingly): 
+    - Primary actions: bg-blue-600 (hover darker).
+    - Success/confirm: bg-green-600.
+    - Danger: bg-red-600/700.
+    - Progress bars may use gray gradient (from-gray-300 to-gray-400).
+- Radius & Shadow: rounded-md/rounded-lg with shadow-sm/md/xl. Avoid heavy shadows.
+- Motion: 
+  - Use transition-colors/transform with 150–300ms durations.
+  - Optional hover:scale-105 for interactive items (links/cards).
+  - Page/section entrances use soft fade/fly/slide equivalents; keep subtle and fast.
+
+Components
+- Page title (“.page-title”): bottom border (border-gray-400), serif font, light shadow tone; sits above main content.
+- Main content area: vertical stack, serif, small gap, no heavy ornamentation.
+- Navigation: left logo, right inline links; links are gray, scale slightly on hover, become darker when active.
+- Cards/Modals: white background, gray border, rounded corners, subtle shadow; internal spacing p-4–p-6. Modal footers can be sticky with a thin top border.
+- Forms: neutral inputs with clear focus ring (gray/blue). Buttons default neutral gray; use blue/green/red for semantic actions.
+- Lists/Comments: use divide-y; list items have hover:bg-gray-100/200. Small iconography via inline SVG; labels are concise and lowercase where fitting.
+- Long-form content: always wrapped in a prose container; images centered and responsive. Prefer white inner frame when highlighting media.
+
+Behavioral Guidance
+- Keep interfaces calm and legible. Default to grayscale; color communicates action/state only.
+- Maintain narrow reading widths and consistent spacing rhythm.
+- Prefer small, reversible animations over large transitions.
+- Ensure a11y: aria-labels for buttons, focus-visible states, readable contrast.
+
+Do and Don’t
+- Do use container mx-auto and lg:max-w-screen-md for primary pages.
+- Do apply serif on titles/body blocks; keep link/button text sans by default.
+- Do keep borders/shadows subtle; avoid bright backgrounds.
+- Don’t overuse accent colors or heavy shadows.
+- Don’t exceed medium motion; avoid aggressive transforms.
+
+Output Requirement
+- Produce HTML with Tailwind classes following the above rules.
+- For rich text sections, wrap with prose classes.
+- Buttons must use neutral gray unless semantics demand blue/green/red.
+- Provide mobile-first responsive classes; test small → large.
+
+The project's front-end must follow accessibility (a11y) rules and use Svelte5 syntax
+and you should use pnpm format && pnpm link && pnpm check to make sure our code is correct.

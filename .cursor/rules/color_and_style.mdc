@@ -1,0 +1,29 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+This style guide primarily uses subtle grayscale colors and Inter/serif fonts.
+
+Color Summary
+• Background: #EDEDED (light gray)
+• Text:
+▫ Primary: gray-700, gray-800, gray-900
+▫ Secondary: gray-500, gray-600
+• Borders/Dividers: gray-300, gray-400; lists use divide-gray-100
+• Cards/Surfaces: white background, gray borders, subtle shadows
+• Accent Colors (for actions/states only):
+▫ Primary actions: bg-blue-600 (darker on hover)
+▫ Success/confirmation: bg-green-600
+▫ Danger: bg-red-600/700
+▫ Progress bars: gray gradient (from-gray-300 to-gray-400)
+
+Font Style Summary
+• Base UI: Inter (sans-serif), readable font sizes
+• Titles/Long-form: font-serif (serif), used for section titles and long-form content
+• Long-form content: must use Tailwind’s prose classes (prose-sm, elevated to sm:prose-base or sm:prose-lg as needed)
+
+Additional Notes
+• Titles and long-form content use serif fonts, with font size adjusted as needed.
+• Interactive elements (such as buttons and links) default to sans-serif fonts, and only use blue/green/red when semantically required.
+• The overall design is grayscale-first; color is reserved for actions or state indication, maintaining a calm and readable interface.
