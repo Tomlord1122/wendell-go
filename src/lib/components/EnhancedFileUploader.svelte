@@ -30,13 +30,11 @@
 
 	// Model selection
 	const modelOptions = [
-		{ value: 'gemini-1.5-flash', label: 'Gemini 1.5 Flash' },
-		{ value: 'gemini-1.5-flash-8b', label: 'Gemini 1.5 Flash 8B' },
-		{ value: 'gemini-1.5-pro', label: 'Gemini 1.5 Pro' },
-		{ value: 'gemini-2.0-flash-exp', label: 'Gemini 2.0 Flash Exp' },
-		{ value: 'gemini-2.0-pro-exp-02-05', label: 'Gemini 2.0 Pro Exp' }
+		{ value: 'gemini-2.5-pro', label: 'Gemini 2.5 Pro' },
+		{ value: 'gemini-2.5-flash', label: 'Gemini 2.5 Flash' },
+		{ value: 'gemini-2.5-flash-lite', label: 'Gemini 2.5 Flash Lite' },
 	];
-	let selectedModel = $state('gemini-2.0-flash-exp');
+	let selectedModel = $state('gemini-2.5-flash');
 
 	// Page selection state
 	let selectedPageIndex = $state<number>(0);
